@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labish Bardiya - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0284c7',
+                        dark: '#0f172a'
+                    },
+                    fontFamily: {
+                        'game': ['"Press Start 2P"', 'cursive'],
+                        'code': ['"Fira Code"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-dark dark:text-gray-100 transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white dark:bg-gray-900 shadow-md z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-xl font-bold text-gray-800 dark:text-white font-game tracking-wider hover:text-blue-500 transition-colors duration-300 cursor-pointer">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">Labish's Tech Studio</span>
+                </a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">About</a>
+                    <a href="#projects" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Projects</a>
+                    <a href="#achievements" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Achievements</a>
+                    <a href="#certifications" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Certifications</a>
+                    <a href="#contact" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Contact</a>
+                    <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button id="theme-toggle-mobile" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:block"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#projects" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">Projects</a>
+            <a href="#achievements" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">Achievements</a>
+            <a href="#certifications" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">Certifications</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex items-center justify-center relative">
+        <!-- Background image with overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="profile.jpg" alt="Background" class="w-full h-full object-cover opacity-80">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-indigo-900/70"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="text-center relative z-10 text-white">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                Labish Bardiya
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                <span id="typewriter" class="inline-block"></span>
+                <span class="typing-cursor">|</span>
+            </p>
+            <div class="flex justify-center space-x-4 mb-8">
+                <a href="https://github.com/labishbardiya" target="_blank" class="text-white hover:text-gray-300 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/labishbardiya" target="_blank" class="text-white hover:text-gray-300 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="https://twitter.com/labishjain" target="_blank" class="text-white hover:text-gray-300 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://instagram.com/labish.bardiya" target="_blank" class="text-white hover:text-gray-300 transform hover:-translate-y-1 transition-all duration-300">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+            </div>
+            <a href="#contact" class="cta-button bg-white text-blue-900 px-8 py-3 rounded-full font-semibold transition-all duration-300">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4">
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        Hello! I'm a Computer Science Engineering student at JK Lakshmipat University, with a passion for web development
+                        and competitive programming. I recently completed a visiting student program at IIT Gandhinagar, which enhanced
+                        my technical expertise and research capabilities.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        I'm a 2⭐ rated programmer on CodeChef and have contributed to various open-source projects. My focus is on
+                        creating efficient, user-friendly web applications while continuously improving my problem-solving skills.
+                    </p>
+                    <div class="mt-6">
+                        <h3 class="font-semibold mb-3 dark:text-white">Skills:</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">Python</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">C++</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">CSS3</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">React</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">Git</span>
+                            <span class="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm skill-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-64 md:h-96 bg-gray-200 rounded-lg overflow-hidden">
+                        <!-- Replace with your actual image -->
+                        <img src="profile.jpg" alt="Labish Bardiya" 
+                             class="w-full h-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer">My Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Secure Banking Application -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="secure_atm.jpeg" alt="Banking Application" class="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">Secure Banking Application</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A robust C++ banking system implementing secure ATM transactions with encryption, authentication, and a reliable client-server communication protocol.</p>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/labishbardiya/Secure-Server-Client-Banking-Application" target="_blank" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blogging Website -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="blogging_website.jpeg" alt="Blogging Website" class="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">Blogging Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A static blogging platform built with modern web technologies, featuring responsive design, dynamic content rendering, and seamless navigation to explore astronomical phenomena, cosmic concepts, and stunning visuals.</p>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/labishbardiya/Blogging-Website" target="_blank" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Generator -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="resume_gen.jpeg" alt="Resume Generator" class="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">Resume Generator</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A website that generates LaTeX code for a student's resume in a clean and professional format specified by the placement cell of IIT Gandhinagar.</p>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/labishbardiya/Resume-Generator-Website" target="_blank" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grid World Simulation -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="grid_world.jpeg" alt="Weather App" class="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">Grid World simulation</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A dynamic Grid World simulation where an agent learns optimal policies using Value and Policy Iteration, featuring a graphical interface for visualizing states, utilities, and rewards.</p>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/labishbardiya/Grid-World-Simulation-Value-and-Policy-Iteration" target="_blank" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HackJKLU v4.0 Website -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="hackathon_website.jpeg" alt="Chat Application" class="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">HackJKLU v4.0 Website</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">An interactive and user-friendly platform featuring event schedules, team registrations, real-time announcements, project submissions, and a streamlined interface for an enhanced hackathon experience.</p>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/labishbardiya/HackJKLU-v4.0-Website" target="_blank" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Clock Application -->
+                <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-300">
+                    <img src="digital_clock.jpeg" alt="Portfolio Website" class="w-full h-48 object-cover transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 dark:text-white">Digital Clock Desktop Application</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A intuitive clock application with Digital Clock, Alarm, Stopwatch, and Timer, built using Python and Tkinter for an intuitive and visually appealing interface.</p>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/labishbardiya/Digital-Clock-Application" target="_blank" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">GitHub</a>
+                        </div>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer">Achievements & Timeline</h2>
+            <div class="relative">
+                <!-- Timeline -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
+                
+                <!-- Achievement Items -->
+                <div class="space-y-12">
+                    <div class="flex items-center justify-between timeline-item">
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-bold text-xl mb-2 dark:text-white">Honoured in the Dean's List</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Academic Excellence</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Recognized for outstanding academic performance.</p>
+                        </div>
+                        <div class="w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500"></div>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <p class="text-gray-600 dark:text-gray-400">Jan 2024 & June 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between timeline-item">
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-bold text-xl mb-2 dark:text-white">Visiting Student</h3>
+                            <p class="text-gray-600 dark:text-gray-400">IIT Gandhinagar</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Enhanced technical expertise and research capabilities.</p>
+                        </div>
+                        <div class="w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500"></div>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <p class="text-gray-600 dark:text-gray-400">Aug 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between timeline-item">
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-bold text-xl mb-2 dark:text-white">Open Source Contribution</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Hacktoberfest 2024</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Contributed to IITGN Resume Generator Website.</p>
+                        </div>
+                        <div class="w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500"></div>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <p class="text-gray-600 dark:text-gray-400">Oct 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between timeline-item">
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-bold text-xl mb-2 dark:text-white">Semi-finalist - Product Design Hackathon</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Innovation & Design</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Developed an innovative product design solution in a competitive environment.</p>
+                        </div>
+                        <div class="w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500"></div>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <p class="text-gray-600 dark:text-gray-400">Nov 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between timeline-item">
+                        <div class="w-5/12 text-right pr-8">
+                            <h3 class="font-bold text-xl mb-2 dark:text-white">2⭐ CodeChef Rating</h3>
+                            <p class="text-gray-600 dark:text-gray-400">Competitive Programming</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Achieved significant rating in algorithmic problem-solving.</p>
+                        </div>
+                        <div class="w-2/12 flex justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500"></div>
+                        </div>
+                        <div class="w-5/12 pl-8">
+                            <p class="text-gray-600 dark:text-gray-400">Feb 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer">Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Meta - Introduction to Front-End Development -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-certificate text-blue-500 text-2xl mr-3"></i>
+                        <h3 class="font-bold text-lg dark:text-white">Introduction to Front-End Development</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Fundamentals of web development, including HTML, CSS, and JavaScript</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Issued by: Meta</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">March 2024</p>
+                </div>
+
+                <!-- University of Michigan - Programming for Everybody -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-certificate text-blue-500 text-2xl mr-3"></i>
+                        <h3 class="font-bold text-lg dark:text-white">Programming for Everybody</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Introduction to programming using Python</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Issued by: University of Michigan</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">November 2023</p>
+                </div>
+
+                <!-- CodeChef - Python Programming -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg transition-transform duration-300 transform hover:scale-105 cursor-pointer">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-certificate text-blue-500 text-2xl mr-3"></i>
+                        <h3 class="font-bold text-lg dark:text-white">Python Programming</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400">Hands-on problem-solving and algorithmic coding using Python</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Issued by: CodeChef</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">August 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 dark:bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 dark:text-white transition-transform duration-300 transform hover:scale-105 cursor-pointer">Get in Touch</h2>
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
+                               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p>&copy; 2025 Labish Bardiya. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/labishbardiya" target="_blank" class="footer-social-link hover:text-gray-300"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/labishbardiya" target="_blank" class="footer-social-link hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/labishjain" target="_blank" class="footer-social-link hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/labish.bardiya" target="_blank" class="footer-social-link hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
